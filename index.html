@@ -1,13 +1,43 @@
----
-layout: presentation
----
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Чат бот</title>
+  <style>
+  .hd
+  {
+	  display:none;
+  }
+  </style>
+</head>
+<body bgcolor="#ccc">
+<h1>Чат БОТ</h1>
+<audio src="audio/privet.mp3 controls"></audio>
+<form action="" method="post">
+  <input type="text" name="t">
+  <input type="submit" name="sub" value="go">
+</form>
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+<?php
+$t =$_POST['t'];
+
+
+
+    if(isset($_POST['sub'])){
+		
+		if($t =="привет"){
+			echo "<audio src='audio/privet.mp3 controls'></audio>";
+		}
+		elseif($t =="2"){
+			echo "2";
+		}
+		elseif($t =="3"){
+			echo "2";
+		}
+		elseif($t =="3"){
+			echo"3";
+		}
+	}
+	
+?>
+</body>
+</html>
